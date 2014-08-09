@@ -13,9 +13,6 @@ branches:
 #    environment configuration    #
 #---------------------------------#
 
-install:
-  - cmd: git submodule -q update --init
-
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
