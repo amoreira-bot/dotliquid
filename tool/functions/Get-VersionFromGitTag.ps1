@@ -1,5 +1,6 @@
 function Get-VersionFromGitTag {
     Write-Host "VersionFromGitTag"
+
     $tag = Get-GitTagOnLastCommit
 
     Write-Host "Tag '$tag'"
@@ -8,6 +9,8 @@ function Get-VersionFromGitTag {
         Foreach-Object { $_.Matches } | Foreach-Object { $_.Groups[1] } | Select-Object -First 1
     
     Write-Host "Filtrada '$tag'"
+
+    Write-Host "VersionFromGitTagEnd "
 }
 
 function Get-GitTagOnLastCommit {
